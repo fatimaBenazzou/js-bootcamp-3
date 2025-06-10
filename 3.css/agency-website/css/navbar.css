@@ -1,0 +1,29 @@
+header {
+    display: flex;
+    padding: 3rem 0;
+
+    & .navbar {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+
+        & .navigation {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 0 20px;
+            margin-right: auto;
+
+            & > li {
+                transition: color 300ms ease-in;
+                font-size: 1.25rem;
+                font-weight: 400;
+                &:hover,
+                & .active {
+                    color: var(--primary-color);
+                }
+            }
+        }
+    }
+}
