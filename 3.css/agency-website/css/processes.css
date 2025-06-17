@@ -1,0 +1,52 @@
+#process {
+    position: relative;
+    width: 100%;
+    margin-top: 3rem;
+    & > img {
+        top: 0;
+        right: 0;
+        z-index: -1;
+        margin-left: auto;
+    }
+
+    .content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        /* display: flex;
+        flex-direction: column;
+        justify-content: center; */
+
+        h2 {
+            max-width: 600px;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            padding: 0;
+            margin: 1.5rem 0 0 0;
+            & > li {
+                display: flex;
+                gap: 2rem;
+                align-items: center;
+                .circle {
+                    width: 4rem;
+                    height: 4rem;
+                    flex-shrink: 0;
+                    border-radius: 50%;
+                    background-color: var(--primary-color);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    span {
+                        color: rgb(var(--secondary-color));
+                    }
+                }
+            }
+        }
+    }
+}
