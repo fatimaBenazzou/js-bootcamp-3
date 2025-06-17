@@ -1,0 +1,21 @@
+#compagnies {
+    overflow: hidden;
+    .container {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+    ul {
+        width: 100%;
+        display: flex;
+        gap: 3rem;
+    }
+    li {
+        background-color: rgb(var(--secondary-color));
+        padding: 1.75rem 2.5rem;
+        border-radius: 50px;
+        flex-shrink: 0;
+    }
+}
