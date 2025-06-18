@@ -2,6 +2,7 @@
     font-family: "CabinetGrotesk-Variable";
 
     --primary-color: rgb(255, 223, 0);
+    --primary-color-val: 255, 223, 0;
     --primary-color-hover: rgb(255, 223, 0, 0.08);
     --base-color: #151515;
     --secondary-color: 27, 27, 27;
