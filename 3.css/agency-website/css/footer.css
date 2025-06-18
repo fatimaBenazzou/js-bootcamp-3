@@ -1,0 +1,28 @@
+footer {
+    margin-top: auto;
+    background-color: rgb(var(--secondary-color));
+    width: 100%;
+    padding: 2.5rem 0;
+    font-size: 0.875rem;
+
+    & > .container {
+        gap: 3rem;
+        flex-wrap: wrap;
+    }
+
+    & li {
+        transition: color 300ms ease-in;
+        font-weight: 400;
+        &:hover,
+        &.active {
+            color: var(--primary-color);
+        }
+    }
+    .social {
+        gap: 1rem;
+    }
+    .links {
+        gap: 2rem;
+        margin-right: auto;
+    }
+}
