@@ -117,3 +117,32 @@ h4::before {
     display: inline-block;
     border-radius: 50%;
 }
+
+/* tabs */
+.tabs {
+    display: flex;
+    gap: 2rem;
+    .tab {
+        border: 1px solid transparent;
+        padding: 0 0 1rem 0;
+        transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        cursor: pointer;
+        font-weight: 600;
+        &.tab-active,
+        &:hover {
+            border-bottom-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+    }
+}
+.tab-content {
+    display: flex;
+    width: 100%;
+    .tab-pane {
+        display: none;
+        width: 100%;
+        &.active {
+            display: block;
+        }
+    }
+}

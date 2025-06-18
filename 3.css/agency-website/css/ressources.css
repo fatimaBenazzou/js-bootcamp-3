@@ -1,0 +1,58 @@
+.web-ressources {
+    display: flex;
+    flex-direction: column;
+
+    .nav {
+        width: 100%;
+        display: flex;
+        gap: 1rem;
+        justify-content: space-between;
+        font-size: 1.25rem;
+        padding: 1rem 0;
+        margin: 1rem 0;
+
+        .more {
+            display: flex;
+            text-decoration: underline;
+            color: var(--primary-color);
+            text-underline-offset: 0.4rem;
+            gap: 0.3rem;
+            span {
+                transition: transform 0.3s ease-in-out;
+            }
+            &:hover {
+                span {
+                    transform: translateX(0.2rem);
+                }
+            }
+        }
+    }
+    .resources-list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+
+        .resource-card {
+            display: flex;
+            flex-direction: column;
+            border-radius: 1.25rem;
+            overflow: hidden;
+            color: var(--base-color);
+            background-color: var(--neutral-color);
+            .resource-card-image {
+                width: 100%;
+            }
+        }
+        .resource-card-body {
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+            align-items: center;
+            padding: 1rem 2rem;
+            flex-wrap: wrap;
+            .btn {
+                margin-left: auto;
+            }
+        }
+    }
+}
