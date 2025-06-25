@@ -74,3 +74,43 @@ main #hero {
         }
     }
 }
+
+@media (max-width: 1280px) {
+    main #hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4rem;
+        h1 {
+            max-width: 16ch;
+        }
+        p {
+            font-size: 1.25rem;
+        }
+        .start {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem;
+            p {
+                max-width: 400px;
+                flex-shrink: 0;
+                font-weight: 300;
+            }
+        }
+        .hero-main {
+            flex-wrap: wrap;
+        }
+        .hero-stats {
+            flex-direction: column;
+            .stats {
+                gap: 2rem;
+                flex-direction: row;
+                li {
+                    min-width: auto;
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}

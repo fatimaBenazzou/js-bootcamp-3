@@ -135,6 +135,9 @@ h4::before {
             color: var(--primary-color);
         }
     }
+    @media (max-width: 768px) {
+        gap: 1rem;
+    }
 }
 .tab-content {
     display: flex;

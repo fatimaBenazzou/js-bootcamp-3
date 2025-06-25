@@ -32,6 +32,17 @@
         grid-template-columns: repeat(4, 1fr);
         gap: 2rem;
 
+        @media (max-width: 1200px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media (max-width: 900px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media (max-width: 450px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
         .resource-card {
             display: flex;
             flex-direction: column;

@@ -11,6 +11,13 @@
         grid-template-columns: repeat(3, minmax(360px, 1fr));
         gap: 3rem;
 
+        @media (max-width: 1200px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+        }
+
         .card {
             background-color: rgb(var(--secondary-color));
             border-radius: 24px;
@@ -18,6 +25,14 @@
             display: flex;
             flex-direction: column;
             gap: 1.125rem;
+
+            @media (max-width: 1200px) {
+                padding: 2rem 3rem;
+            }
+
+            @media (max-width: 768px) {
+                padding: 1.5rem 2rem;
+            }
 
             .circle {
                 width: 60px;

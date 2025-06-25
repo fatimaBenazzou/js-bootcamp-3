@@ -26,3 +26,22 @@ footer {
         margin-right: auto;
     }
 }
+
+@media (max-width: 1280px) {
+    footer {
+        .copyright,
+        .logo {
+            width: 100%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+        }
+        .social {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .links {
+            flex-direction: column;
+        }
+    }
+}
