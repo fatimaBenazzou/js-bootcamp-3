@@ -1,0 +1,14 @@
+ALGORITHM swap
+VAR
+    x,y,t: INTEGER
+BEGIN
+    Write("Enter the value of X")
+    Read(x)
+    Write("Enter the value of Y")
+    Read(y)
+    t=x
+    x:=y 
+    y:=t
+    Write("The value of x=", x, "and the value of y= ", y )
+
+END

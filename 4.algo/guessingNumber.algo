@@ -1,0 +1,30 @@
+ALGORITHM MysteryNumberGame
+VAR
+    mysteryNumber, userGuess, attempts: INTEGER
+BEGIN
+    mysteryNumber:= 45
+    attemps:= 3
+
+    Write("Welcome to the Mystery Game !")
+    Write("You have 3 attemps to guess the number between 1 and 100.")
+
+    WHILE (attempts > 0) DO
+        Write("Enter your guess: ")
+        Read(userGuess)
+
+        IF (userGuess == mysteryNumber) THEN
+            Write("Congrats ! You guessed the mystery number 🎆")
+            Break
+        ELSE_IF (userGuess < mysteryNumber) THEN
+            Write("Too low! Try again.")
+        ELSE
+            Write("Too heigh! Try again.")
+        END_IF
+
+        attemps--
+    END_WHILE
+
+    IF (attemps == 0 and userGuess!=mysteryNumber) THEN
+        Write("Game Over !, the mystery number was", mysteryNumber)
+    END_IF
+END

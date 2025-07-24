@@ -1,0 +1,22 @@
+ALGORITHM MinMAx
+VAR
+    min, max, i: INTEGER
+BEGIN
+    Write("Enter a min value")
+    Read(min)
+    Write("Enter a max value")
+    Read(max)
+
+    // FOR i FROM min TO max STEP 1  DO
+    //     IF (i%2==0) THEN
+    //         Write(i)
+    //     END_IF
+    // END_FOR
+    i := min
+    WHILE (i <= max) DO
+        IF (i%2==0) THEN
+            Write(i)
+        END_IF
+        i := i + 1
+    END_WHILE
+END
