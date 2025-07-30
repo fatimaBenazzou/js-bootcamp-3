@@ -104,5 +104,26 @@
                 }
             }
         }
+        .project-dots {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            .dot {
+                width: 2rem;
+                height: 0.5rem;
+                background-color: rgba(var(--primary-color-val), 0.5);
+                border-radius: 8px;
+                cursor: pointer;
+                transition: width 300ms ease-in-out, background-color 300ms ease-in-out;
+                &:hover {
+                    width: 3rem;
+                }
+                &.dot--selected {
+                    width: 4rem;
+                    background-color: rgba(var(--primary-color-val), 1);
+                }
+            }
+        }
     }
 }

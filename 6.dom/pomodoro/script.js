@@ -79,33 +79,73 @@ stopBtn.addEventListener("click", () => {
 
 // 9. Add event listener to the Clear button
 // When clicked:
-// - Stop the timer
-// - Reset to session mode
-// - Reset timeLeft to the original session length
-// - Update the stats text to "Session"
-// - Update the displayed time to match the reset value
+clearBtn.addEventListener("click", () => {
+    // - Stop the timer
+    clearInterval(interval);
+    isRunning = false;
+    // - Reset to session mode
+    isSession = true;
+    // - Reset timeLeft to the original session length
+    timeLeft = sessionLength * 60;
+    // - Update the stats text to "Session"
+    statsEl.textContent = "Session";
+    // - Update the displayed time to match the reset value
+    updateClock();
+});
 
 // 10. Add event listener to the Session Increment button
-// Increase sessionLength (maximum of 60)
-// Update the session display
-// If currently in session mode and not running, update timeLeft accordingly
-// Then update the clock display
+sessInc.addEventListener("click", () => {
+    // Increase sessionLength (maximum of 60)
+    if (sessionLength < 60) {
+        // Update the session display
+        sessionLength++;
+        sessionEl.textContent = sessionLength;
+        // If currently in session mode and not running, update timeLeft accordingly
+        if (isSession && !isRunning) timeLeft = sessionLength * 60;
+
+        // Then update the clock display
+        updateClock();
+    }
+});
 
 // 11. Add event listener to the Session Decrement button
 // Decrease sessionLength (minimum of 1)
 // Update the session display
 // If currently in session mode and not running, update timeLeft accordingly
 // Then update the clock display
+sessInc.addEventListener("click", () => {
+    if (sessionLength > 1) {
+        sessionLength--;
+        sessionEl.textContent = sessionLength;
+        if (isSession && !isRunning) timeLeft = sessionLength * 60;
+        updateClock();
+    }
+});
 
 // 12. Add event listener to the Break Increment button
 // Increase breakLength (maximum of 30)
 // Update the break display
+breakInc.addEventListener("click", () => {
+    if (breakLength < 30) {
+        breakLength++;
+        breakEl.textContent = breakLength;
+    }
+});
 
 // 13. Add event listener to the Break Decrement button
 // Decrease breakLength (minimum of 1)
 // Update the break display
+breakDec.addEventListener("click", () => {
+    if (breakLength > 1) {
+        breakLength--;
+        breakEl.textContent = breakLength;
+    }
+});
 
 // 14. Call updateClock() once at the beginning to initialize the display
-
+updateClock();
 // 15. (Optional) Add theme toggle functionality
 // Add event listener to a theme-toggle button that toggles a "light" class on the body
+document.getElementById("theme-toggle").addEventListener("click", () => {
+    document.body.classList.toggle("light");
+});
