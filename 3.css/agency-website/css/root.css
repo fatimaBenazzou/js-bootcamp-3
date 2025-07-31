@@ -204,3 +204,37 @@ h4::before {
         max-width: 1536px;
     }
 }
+
+/* Animations */
+/* Base hidden state */
+[data-observe-me] {
+    opacity: 0;
+    transform: translateY(40px);
+    visibility: hidden;
+}
+
+/* When active: fade in */
+[data-observe-me][visible] {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Left slide animation */
+[data-observe-me][data-slide="left"] {
+    transform: translateX(-40px);
+}
+[data-observe-me][data-slide="left"][visible] {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* Right slide animation */
+[data-observe-me][data-slide="right"] {
+    transform: translateX(40px);
+}
+[data-observe-me][data-slide="right"][visible] {
+    transform: translateX(0);
+    opacity: 1;
+}

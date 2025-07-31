@@ -51,7 +51,9 @@
             <section id="hero">
                 <!-- 1st part -->
                 <div class="container row hero-main">
-                    <h1>we create beautiful <span>efficient</span> wordpress websites.</h1>
+                    <h1 data-observe-me data-slide="left">
+                        we create beautiful <span>efficient</span> wordpress websites.
+                    </h1>
                     <div class="start">
                         <p>
                             You need to get positive results when you spend hard earned marketing
@@ -465,30 +467,22 @@
             </section>
 
             <!-- ressources -->
-            <section id="web-ressources" class="web-ressources">
+            <section id="web-resources" class="web-resources">
                 <div class="container" data-tab-container>
-                    <h2>wordpress <span>ressources</span></h2>
-                    <div class="nav">
-                        <ul class="tabs" role="tablist">
-                            <li>
-                                <a role="tab" data-tab="plugins" class="tab tab-active">Plugins</a>
-                            </li>
-                            <li>
-                                <a role="tab" data-tab="themes" class="tab">Themes</a>
-                            </li>
-                            <li>
-                                <a role="tab" data-tab="templates" class="tab">Templates</a>
-                            </li>
-                            <li>
-                                <a role="tab" data-tab="ui-kits" class="tab">UI Kits</a>
-                            </li>
-                        </ul>
-
-                        <a href="/" class="more"
-                            >View All <span class="solar--arrow-right-linear"></span
-                        ></a>
-                    </div>
-                    <div class="tab-content">
+                    <h2 data-observe-me>Our web <span>resources</span></h2>
+                    <nav data-observe-me>
+                        <div role="tablist" class="tabs">
+                            <a role="tab" data-tab="plugins" class="tab tab-active">Plugins</a>
+                            <a role="tab" data-tab="themes" class="tab">Themes</a>
+                            <a role="tab" data-tab="templates" class="tab">Templates</a>
+                            <a role="tab" data-tab="ui-kits" class="tab">UI Kits</a>
+                        </div>
+                        <a href="/" class="more">
+                            view all
+                            <span class="heroicons-solid--arrow-narrow-right"></span>
+                        </a>
+                    </nav>
+                    <div class="tab-content" data-observe-me>
                         <div data-tab-pane="plugins" class="tab-pane active">
                             <ul class="resources-list">
                                 <li class="resource-card">
@@ -533,8 +527,308 @@
                                 </li>
                             </ul>
                         </div>
-                        <!-- <div data-tab-pane="themes" class="tab-pane">
-                            ">
+                        <div data-tab-pane="themes" class="tab-pane">
+                            <ul class="resources-list">
+                                <li class="resource-card">
+                                    <img src="./images/r2.png" alt="" class="resource-card-image" />
+                                    <div class="resource-card-body">
+                                        <div class="resource-card-header">
+                                            <h5>Plugin Name</h5>
+                                            <p>Blog</p>
+                                        </div>
+                                        <button class="btn btn-small">View</button>
+                                    </div>
+                                </li>
+                                <li class="resource-card">
+                                    <img src="./images/r1.png" alt="" class="resource-card-image" />
+                                    <div class="resource-card-body">
+                                        <div class="resource-card-header">
+                                            <h5>Plugin Name</h5>
+                                            <p>Blog</p>
+                                        </div>
+                                        <button class="btn btn-small">View</button>
+                                    </div>
+                                </li>
+                                <li class="resource-card">
+                                    <img src="./images/r3.png" alt="" class="resource-card-image" />
+                                    <div class="resource-card-body">
+                                        <div class="resource-card-header">
+                                            <h5>Plugin Name</h5>
+                                            <p>Blog</p>
+                                        </div>
+                                        <button class="btn btn-small">View</button>
+                                    </div>
+                                </li>
+                                <li class="resource-card">
+                                    <img src="./images/r4.png" alt="" class="resource-card-image" />
+                                    <div class="resource-card-body">
+                                        <div class="resource-card-header">
+                                            <h5>Plugin Name</h5>
+                                            <p>Blog</p>
+                                        </div>
+                                        <button class="btn btn-small">View</button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div data-tab-pane="templates" class="tab-pane">
+                            <ul class="resources-list">
+                                <li class="resource-card">
+                                    <img src="./images/r2.png" alt="" class="resource-card-image" />
+                                    <div class="resource-card-body">
+                                        <div class="resource-card-header">
+                                            <h5>Plugin Name</h5>
+                                            <p>Blog</p>
+                                        </div>
+                                        <button class="btn btn-small">View</button>
+                                    </div>
+                                </li>
+                                <li class="resource-card">
+                                    <img src="./images/r3.png" alt="" class="resource-card-image" />
+                                    <div class="resource-card-body">
+                                        <div class="resource-card-header">
+                                            <h5>Plugin Name</h5>
+                                            <p>Blog</p>
+                                        </div>
+                                        <button class="btn btn-small">View</button>
+                                    </div>
+                                </li>
+                                <li class="resource-card">
+                                    <img src="./images/r1.png" alt="" class="resource-card-image" />
+                                    <div class="resource-card-body">
+                                        <div class="resource-card-header">
+                                            <h5>Plugin Name</h5>
+                                            <p>Blog</p>
+                                        </div>
+                                        <button class="btn btn-small">View</button>
+                                    </div>
+                                </li>
+                                <li class="resource-card">
+                                    <img src="./images/r4.png" alt="" class="resource-card-image" />
+                                    <div class="resource-card-body">
+                                        <div class="resource-card-header">
+                                            <h5>Plugin Name</h5>
+                                            <p>Blog</p>
+                                        </div>
+                                        <button class="btn btn-small">View</button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div data-tab-pane="ui-kits" class="tab-pane">
+                            <ul class="resources-list">
+                                <li class="resource-card">
+                                    <img src="./images/r2.png" alt="" class="resource-card-image" />
+                                    <div class="resource-card-body">
+                                        <div class="resource-card-header">
+                                            <h5>Plugin Name</h5>
+                                            <p>Blog</p>
+                                        </div>
+                                        <button class="btn btn-small">View</button>
+                                    </div>
+                                </li>
+                                <li class="resource-card">
+                                    <img src="./images/r3.png" alt="" class="resource-card-image" />
+                                    <div class="resource-card-body">
+                                        <div class="resource-card-header">
+                                            <h5>Plugin Name</h5>
+                                            <p>Blog</p>
+                                        </div>
+                                        <button class="btn btn-small">View</button>
+                                    </div>
+                                </li>
+                                <li class="resource-card">
+                                    <img src="./images/r4.png" alt="" class="resource-card-image" />
+                                    <div class="resource-card-body">
+                                        <div class="resource-card-header">
+                                            <h5>Plugin Name</h5>
+                                            <p>Blog</p>
+                                        </div>
+                                        <button class="btn btn-small">View</button>
+                                    </div>
+                                </li>
+                                <li class="resource-card">
+                                    <img src="./images/r1.png" alt="" class="resource-card-image" />
+                                    <div class="resource-card-body">
+                                        <div class="resource-card-header">
+                                            <h5>Plugin Name</h5>
+                                            <p>Blog</p>
+                                        </div>
+                                        <button class="btn btn-small">View</button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- testimonials -->
+            <section id="testimonials">
+                <div class="container">
+                    <h4>Testimonials</h4>
+                    <h2>what our clients <span>say</span>?</h2>
+                    <div class="content">
+                        <!-- figure -->
+                        <div class="figure">
+                            <div class="centered-img">
+                                <img src="images/Ellipse.png" alt="" />
+                                <img class="floating" src="images/guill.svg" alt="" />
+                            </div>
+                            <img class="floating" src="images/girl1.png" alt="" />
+                            <img class="floating" src="images/girl1.png" alt="" />
+                            <img class="floating" src="images/girl2.png" alt="" />
+                            <img class="floating" src="images/girl2.png" alt="" />
+                        </div>
+                        <!-- review -->
+                        <div id="review-slider" class="reviews">
+                            <ul class="review-container">
+                                <li>
+                                    <!-- rating -->
+                                    <div class="rating" data-rating="3">
+                                        <span class="material-symbols--star-rounded"></span>
+                                        <span class="material-symbols--star-rounded"></span>
+                                        <span class="material-symbols--star-rounded"></span>
+                                        <span class="material-symbols--star-rounded"></span>
+                                        <span class="material-symbols--star-rounded"></span>
+                                    </div>
+                                    <p>
+                                        “Es ist ein lang erwiesener Fakt, dass ein Leser vom Text
+                                        abgelenkt wird, wenn er sich ein Layout ansieht. Der Punkt,
+                                        Lorem Ipsum zu nutzen, ist, dass es mehr oder weniger die
+                                        normale Anordnung von Buchstaben darstellt und somit nach
+                                        lesbarer Sprache aussieht.”
+                                    </p>
+                                    <h5>Alexander Gibson 1</h5>
+                                </li>
+                                <li>
+                                    <!-- rating -->
+                                    <div class="rating" data-rating="4">
+                                        <span class="material-symbols--star-rounded"></span>
+                                        <span class="material-symbols--star-rounded"></span>
+                                        <span class="material-symbols--star-rounded"></span>
+                                        <span class="material-symbols--star-rounded"></span>
+                                        <span class="material-symbols--star-rounded"></span>
+                                    </div>
+                                    <p>
+                                        “Es ist ein lang erwiesener Fakt, dass ein Leser vom Text
+                                        abgelenkt wird, wenn er sich ein Layout ansieht. Der Punkt,
+                                        Lorem Ipsum zu nutzen, ist, dass es mehr oder weniger die
+                                        normale Anordnung von Buchstaben darstellt und somit nach
+                                        lesbarer Sprache aussieht.”
+                                    </p>
+                                    <h5>Alexander Gibson 2</h5>
+                                </li>
+                                <li>
+                                    <!-- rating -->
+                                    <div class="rating" data-rating="5">
+                                        <span class="material-symbols--star-rounded"></span>
+                                        <span class="material-symbols--star-rounded"></span>
+                                        <span class="material-symbols--star-rounded"></span>
+                                        <span class="material-symbols--star-rounded"></span>
+                                        <span class="material-symbols--star-rounded"></span>
+                                    </div>
+                                    <p>
+                                        “Es ist ein lang erwiesener Fakt, dass ein Leser vom Text
+                                        abgelenkt wird, wenn er sich ein Layout ansieht. Der Punkt,
+                                        Lorem Ipsum zu nutzen, ist, dass es mehr oder weniger die
+                                        normale Anordnung von Buchstaben darstellt und somit nach
+                                        lesbarer Sprache aussieht.”
+                                    </p>
+                                    <h5>Alexander Gibson 3</h5>
+                                </li>
+                                <li>
+                                    <!-- rating -->
+                                    <div class="rating" data-rating="2">
+                                        <span class="material-symbols--star-rounded"></span>
+                                        <span class="material-symbols--star-rounded"></span>
+                                        <span class="material-symbols--star-rounded"></span>
+                                        <span class="material-symbols--star-rounded"></span>
+                                        <span class="material-symbols--star-rounded"></span>
+                                    </div>
+                                    <p>
+                                        “Es ist ein lang erwiesener Fakt, dass ein Leser vom Text
+                                        abgelenkt wird, wenn er sich ein Layout ansieht. Der Punkt,
+                                        Lorem Ipsum zu nutzen, ist, dass es mehr oder weniger die
+                                        normale Anordnung von Buchstaben darstellt und somit nach
+                                        lesbarer Sprache aussieht.”
+                                    </p>
+                                    <h5>Alexander Gibson 4</h5>
+                                </li>
+                            </ul>
+                            <div class="action row">
+                                <button class="prev"><span class="ep--arrow-left"></span></button>
+                                <button class="circle next">
+                                    <span class="ep--arrow-right"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- blogs -->
+            <section id="web-posts" class="web-resources">
+                <div class="container" data-tab-container>
+                    <h2 data-observe-me>our latest blog <span>posts</span></h2>
+                    <nav data-observe-me>
+                        <div role="tablist" class="tabs">
+                            <a role="tab" data-tab="plugins" class="tab tab-active">Plugins</a>
+                            <a role="tab" data-tab="themes" class="tab">Themes</a>
+                            <a role="tab" data-tab="templates" class="tab">Templates</a>
+                            <a role="tab" data-tab="ui-kits" class="tab">UI Kits</a>
+                        </div>
+                        <a href="/" class="more">
+                            view all
+                            <span class="heroicons-solid--arrow-narrow-right"></span>
+                        </a>
+                    </nav>
+                    <div class="tab-content" data-observe-me>
+                        <div data-tab-pane="plugins" class="tab-pane active">
+                            <ul class="resources-list">
+                                <li class="resource-card">
+                                    <img src="./images/r1.png" alt="" class="resource-card-image" />
+                                    <div class="resource-card-body">
+                                        <div class="resource-card-header">
+                                            <h5>Plugin Name</h5>
+                                            <p>Blog</p>
+                                        </div>
+                                        <button class="btn btn-small">View</button>
+                                    </div>
+                                </li>
+                                <li class="resource-card">
+                                    <img src="./images/r2.png" alt="" class="resource-card-image" />
+                                    <div class="resource-card-body">
+                                        <div class="resource-card-header">
+                                            <h5>Plugin Name</h5>
+                                            <p>Blog</p>
+                                        </div>
+                                        <button class="btn btn-small">View</button>
+                                    </div>
+                                </li>
+                                <li class="resource-card">
+                                    <img src="./images/r3.png" alt="" class="resource-card-image" />
+                                    <div class="resource-card-body">
+                                        <div class="resource-card-header">
+                                            <h5>Plugin Name</h5>
+                                            <p>Blog</p>
+                                        </div>
+                                        <button class="btn btn-small">View</button>
+                                    </div>
+                                </li>
+                                <li class="resource-card">
+                                    <img src="./images/r4.png" alt="" class="resource-card-image" />
+                                    <div class="resource-card-body">
+                                        <div class="resource-card-header">
+                                            <h5>Plugin Name</h5>
+                                            <p>Blog</p>
+                                        </div>
+                                        <button class="btn btn-small">View</button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div data-tab-pane="themes" class="tab-pane">
                             <ul class="resources-list">
                                 <li class="resource-card">
                                     <img src="./images/r1.png" alt="" class="resource-card-image" />
@@ -579,7 +873,6 @@
                             </ul>
                         </div>
                         <div data-tab-pane="templates" class="tab-pane">
-                            ">
                             <ul class="resources-list">
                                 <li class="resource-card">
                                     <img src="./images/r1.png" alt="" class="resource-card-image" />
@@ -624,130 +917,6 @@
                             </ul>
                         </div>
                         <div data-tab-pane="ui-kits" class="tab-pane">
-                            ">
-                            <ul class="resources-list">
-                                <li class="resource-card">
-                                    <img src="./images/r1.png" alt="" class="resource-card-image" />
-                                    <div class="resource-card-body">
-                                        <div class="resource-card-header">
-                                            <h5>Plugin Name</h5>
-                                            <p>Blog</p>
-                                        </div>
-                                        <button class="btn btn-small">View</button>
-                                    </div>
-                                </li>
-                                <li class="resource-card">
-                                    <img src="./images/r2.png" alt="" class="resource-card-image" />
-                                    <div class="resource-card-body">
-                                        <div class="resource-card-header">
-                                            <h5>Plugin Name</h5>
-                                            <p>Blog</p>
-                                        </div>
-                                        <button class="btn btn-small">View</button>
-                                    </div>
-                                </li>
-                                <li class="resource-card">
-                                    <img src="./images/r3.png" alt="" class="resource-card-image" />
-                                    <div class="resource-card-body">
-                                        <div class="resource-card-header">
-                                            <h5>Plugin Name</h5>
-                                            <p>Blog</p>
-                                        </div>
-                                        <button class="btn btn-small">View</button>
-                                    </div>
-                                </li>
-                                <li class="resource-card">
-                                    <img src="./images/r4.png" alt="" class="resource-card-image" />
-                                    <div class="resource-card-body">
-                                        <div class="resource-card-header">
-                                            <h5>Plugin Name</h5>
-                                            <p>Blog</p>
-                                        </div>
-                                        <button class="btn btn-small">View</button>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div> -->
-                    </div>
-                </div>
-            </section>
-
-            <!-- testimonials -->
-            <section id="testimonials">
-                <div class="container">
-                    <h4>Testimonials</h4>
-                    <h2>what our clients <span>say</span>?</h2>
-                    <div class="content">
-                        <!-- figure -->
-                        <div class="figure">
-                            <div class="centered-img">
-                                <img src="images/Ellipse.png" alt="" />
-                                <img class="floating" src="images/guill.svg" alt="" />
-                            </div>
-                            <img class="floating" src="images/girl1.png" alt="" />
-                            <img class="floating" src="images/girl1.png" alt="" />
-                            <img class="floating" src="images/girl2.png" alt="" />
-                            <img class="floating" src="images/girl2.png" alt="" />
-                        </div>
-                        <!-- review -->
-                        <div id="review-slider" class="reviews">
-                            <ul class="review-container">
-                                <li>
-                                    <!-- rating -->
-                                    <div class="rating" data-rating="3">
-                                        <span class="material-symbols--star-rounded"></span>
-                                        <span class="material-symbols--star-rounded"></span>
-                                        <span class="material-symbols--star-rounded"></span>
-                                        <span class="material-symbols--star-rounded"></span>
-                                        <span class="material-symbols--star-rounded"></span>
-                                    </div>
-                                    <p>
-                                        “Es ist ein lang erwiesener Fakt, dass ein Leser vom Text
-                                        abgelenkt wird, wenn er sich ein Layout ansieht. Der Punkt,
-                                        Lorem Ipsum zu nutzen, ist, dass es mehr oder weniger die
-                                        normale Anordnung von Buchstaben darstellt und somit nach
-                                        lesbarer Sprache aussieht.”
-                                    </p>
-                                    <h5>Alexander Gibson</h5>
-                                </li>
-                            </ul>
-                            <div class="action row">
-                                <button class="prev"><span class="ep--arrow-left"></span></button>
-                                <button class="circle next">
-                                    <span class="ep--arrow-right"></span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- blogs -->
-            <section id="web-posts" class="web-ressources">
-                <div class="container" data-tab-container>
-                    <h2>our latest blog <span>posts</span></h2>
-                    <div class="nav">
-                        <ul role="tablist" class="tabs">
-                            <li>
-                                <a role="tab" data-tab="plugins" class="tab tab-active">Plugins</a>
-                            </li>
-                            <li>
-                                <a role="tab" data-tab="themes" class="tab">Themes</a>
-                            </li>
-                            <li>
-                                <a role="tab" data-tab="templates" class="tab">Templates</a>
-                            </li>
-                            <li>
-                                <a role="tab" data-tab="ui-kits" class="tab">UI Kits</a>
-                            </li>
-                        </ul>
-                        <a href="/" class="more">
-                            view all
-                            <span class="heroicons-solid--arrow-narrow-right"></span>
-                        </a>
-                    </div>
-                    <div class="tab-content">
-                        <div data-tab-pane="plugins" class="tab-pane active">
                             <ul class="resources-list">
                                 <li class="resource-card">
                                     <img src="./images/r1.png" alt="" class="resource-card-image" />
@@ -833,15 +1002,17 @@
                 <p class="copyright">Copyright 2025 | GMC</p>
             </div>
         </footer>
-
         <!-- scripts -->
         <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
         <script src="https://unpkg.com/embla-carousel-autoplay/embla-carousel-autoplay.umd.js"></script>
 
+        <script src="js/script.js"></script>
         <script src="js/hero.js"></script>
         <script src="js/sponsors.js"></script>
         <script src="js/services.js"></script>
         <script src="js/projects.js"></script>
         <script src="js/companies.js"></script>
+        <script src="js/testimonials.js"></script>
+        <script src="js/tabs.js"></script>
     </body>
 </html>
