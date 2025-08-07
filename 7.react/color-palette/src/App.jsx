@@ -1,4 +1,5 @@
-import PaletteCard from "./components/PaletteCard";
+import { useState } from "react";
+import PaletteList from "./components/PaletteList";
 
 const palettes = [
     {
@@ -76,14 +77,12 @@ const palettes = [
 ];
 
 export default function App() {
+    const [selectedColor, setSelectedColor] = useState(null);
+
     return (
-        <main>
+        <main style={selectedColor ? { background: selectedColor } : undefined}>
             <h1>Color Palette</h1>
-            <ul className="palettes-grid">
-                {palettes.map((palette, index) => (
-                    <PaletteCard from={palette.from} to={palette.to} key={"palette" + index} />
-                ))}
-            </ul>
+            <PaletteList palettes={palettes} onClick={setSelectedColor} />
         </main>
     );
 }
