@@ -61,8 +61,10 @@ export default function Header() {
 
                 {/* actions */}
                 <div>
-                    <Button>New Account</Button>
-                    <Button href={"/"}>Sign in</Button>
+                    <Button white={true}>New Account</Button>
+                    <Button className="hidden lg:flex" href="#login">
+                        Sign in
+                    </Button>
                 </div>
             </nav>
         </header>
