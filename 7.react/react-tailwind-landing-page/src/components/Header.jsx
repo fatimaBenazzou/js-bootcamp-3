@@ -1,6 +1,7 @@
+import { useState } from "react";
 import Button from "./Button";
 
-const NAVIGATION = [
+const navigation = [
     {
         title: "Features",
         url: "#features",
@@ -30,42 +31,100 @@ const NAVIGATION = [
 ];
 
 export default function Header() {
+    const [openNavigation, setOpenNavigation] = useState(false);
     return (
-        <header className={`fixed top-0 left-0  w-full border-b border-border z-50 transition-all`}>
-            <nav className="flex items-center justify-between px-5 lg:px-8 xl:px-10 max-lg:py-4">
+        <header
+            className={`fixed top-0 left-0 w-full z-50 border-b border-border transition-all  ${
+                openNavigation ? "bg-bg shadow-lg" : "bg-bg/90 backdrop-blur-sm hover:bg-bg/95"
+            }`}
+        >
+            <nav className="flex items-center px-5 lg:px-8 xl:px-10 max-lg:py-4">
                 {/* logo */}
                 <a
-                    href="#hero"
                     className="block w-48 xl:mr-8 transition-transform duration-300 hover:scale-105"
+                    href="#hero"
                 >
-                    <img src="/brainwave.svg" alt="Brainwave" />
+                    <img
+                        src={"/brainwave.svg"}
+                        width={190}
+                        height={40}
+                        alt="Brainwave"
+                        className="transition-opacity duration-300 hover:opacity-80"
+                    />
                 </a>
 
                 {/* links */}
-                <div className="flex ">
-                    <ul
-                        className={`flex flex-col lg:flex-row items-center justify-center m-auto z-20 gap-12`}
-                    >
-                        {NAVIGATION.map((link, index) => (
-                            <li
-                                key={"nav link" + index}
-                                className={`block relative font-code text-2xl uppercase hover:text-accent-lavender  ${
-                                    link.onlyMobile ? "lg:hidden" : ""
-                                } py-6 md:py-8 lg:text-xs lg:font-semibold`}
-                            >
-                                <a href={link.url}>{link.title}</a>
+                <div
+                    className={`${
+                        openNavigation ? "flex" : "hidden"
+                    } fixed top-20 left-0 right-0 bottom-0 bg-bg lg:static lg:flex lg:mx-auto lg:bg-transparent`}
+                >
+                    <ul className="relative z-20 flex flex-col items-center justify-center m-auto lg:flex-row">
+                        {navigation.map((item, index) => (
+                            <li key={"nav" + index}>
+                                <a
+                                    href={item.url}
+                                    className={`block relative font-code text-2xl uppercase text-neutral transition-colors hover:text-accent-lavender ${
+                                        item.onlyMobile ? "lg:hidden" : ""
+                                    } px-6 py-6 md:py-8 lg:-mr-px lg:text-xs lg:font-semibold  lg:leading-5 lg:hover:text-neutral xl:px-12`}
+                                >
+                                    {item.title}
+                                </a>
                             </li>
                         ))}
                     </ul>
+                    {/* <HamburgerMenu /> */}
+                    {/* Decoration */}
+                    <div className="absolute inset-0 pointer-events-none lg:hidden">
+                        <div className="absolute inset-0 opacity-[.03]">
+                            <img
+                                className="w-full h-full object-cover"
+                                src={"/background.jpg"}
+                                width={688}
+                                height={953}
+                                alt="Background"
+                            />
+                        </div>
+
+                        {/* <Rings /> */}
+                        <div className="absolute top-1/2 left-1/2 w-[51.375rem] aspect-square border border-neutral-2/10 rounded-full -translate-x-1/2 -translate-y-1/2">
+                            <div className="absolute top-1/2 left-1/2 w-[36.125rem] aspect-square border border-neutral-2/10 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+                            <div className="absolute top-1/2 left-1/2 w-[23.125rem] aspect-square border border-neutral-2/10 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+                        </div>
+                        {/* <SideLines /> */}
+                        <>
+                            <div className="absolute top-0 left-5 w-px h-full bg-stroke"></div>
+                            <div className="absolute top-0 right-5 w-px h-full bg-stroke"></div>
+                        </>
+                        {/* <BackgroundCircles /> */}
+                        <>
+                            <div className="absolute top-[4.4rem] left-16 w-3 h-3 bg-gradient-to-b from-[#DD734F] to-[#1A1A32] rounded-full"></div>
+                            <div className="absolute top-[12.6rem] right-16 w-3 h-3 bg-gradient-to-b from-[#B9AEDF] to-[#1A1A32] rounded-full"></div>
+                            <div className="absolute top-[26.8rem] left-12 w-6 h-6 bg-gradient-to-b from-[#88E5BE] to-[#1A1A32] rounded-full"></div>
+                        </>
+                    </div>
                 </div>
 
-                {/* actions */}
-                <div>
-                    <Button white={true}>New Account</Button>
-                    <Button className="hidden lg:flex" href="#login">
-                        Sign in
-                    </Button>
-                </div>
+                <a
+                    href="#signup"
+                    className="button hidden mr-8 text-neutral/50 transition-colors hover:text-neutral lg:block"
+                >
+                    New account
+                </a>
+                <Button className="hidden lg:flex" href="#login">
+                    Sign in
+                </Button>
+
+                <Button
+                    className="ml-auto lg:hidden transition-transform duration-300 hover:scale-110 active:scale-95"
+                    onClick={() => setOpenNavigation(!openNavigation)}
+                >
+                    {openNavigation ? (
+                        <span className="icon-[mdi--close] w-4 h-4"></span>
+                    ) : (
+                        <span className={"icon-[mdi--menu] w-4 h-4"}></span>
+                    )}
+                </Button>
             </nav>
         </header>
     );

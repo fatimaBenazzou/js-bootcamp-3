@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@iconify-json/mdi": "^1.2.3",
+    "@iconify/tailwind4": "^1.0.6",
     "@tailwindcss/vite": "^4.1.11",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
