@@ -1,7 +1,11 @@
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Benefits from "./sections/Benefits";
 import Collaboration from "./sections/Collaboration";
 import Hero from "./sections/Hero";
+import Pricing from "./sections/Pricing";
+import Roadmap from "./sections/Roadmap";
+import Services from "./sections/Services";
 
 export default function App() {
     return (
@@ -12,7 +16,11 @@ export default function App() {
             <Hero />
             <Benefits />
             <Collaboration />
+            <Services />
+            <Pricing />
+            <Roadmap />
             {/* footer */}
+            <Footer />
         </main>
     );
 }
