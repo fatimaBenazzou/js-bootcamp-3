@@ -1,4 +1,6 @@
 import Header from "./components/Header";
+import Benefits from "./sections/Benefits";
+import Collaboration from "./sections/Collaboration";
 import Hero from "./sections/Hero";
 
 export default function App() {
@@ -8,6 +10,8 @@ export default function App() {
             <Header />
             {/* main content */}
             <Hero />
+            <Benefits />
+            <Collaboration />
             {/* footer */}
         </main>
     );
