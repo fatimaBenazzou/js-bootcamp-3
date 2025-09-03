@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Header from "./components/Header";
+import TodoList from "./components/TodoList";
 
 export default function App() {
     const [theme, setTheme] = useState("dark");
@@ -19,6 +20,9 @@ export default function App() {
         >
             <div className="container mx-auto px-4 pt-12 max-w-md">
                 <Header theme={theme} toggleTheme={toggleTheme} />
+                <main>
+                    <TodoList />
+                </main>
             </div>
         </div>
     );
