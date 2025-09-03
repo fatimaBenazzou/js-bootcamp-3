@@ -2,13 +2,14 @@ import React from "react";
 import TodoAdd from "./TodoAdd";
 import TodoItem from "./TodoItem";
 
-export default function TodoList() {
+export default function TodoList({ todos, addTodo }) {
     return (
         <section>
-            <TodoAdd />
+            <TodoAdd addTodo={addTodo} />
             <ul className="list bg-base-100 shadow-lg rounded-box">
-                <TodoItem text={"test"} />
-                <TodoItem text={"test 2"} />
+                {todos.map((todo) => (
+                    <TodoItem key={todo.id} todo={todo} />
+                ))}
             </ul>
         </section>
     );
