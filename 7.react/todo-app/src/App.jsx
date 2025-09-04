@@ -6,7 +6,6 @@ import Filters from "./components/Filters";
 export default function App() {
     const [theme, setTheme] = useState("dark");
     const [todos, setTodos] = useState([]);
-    console.log({ todos });
 
     const toggleTheme = () => {
         const newTheme = theme === "dark" ? "light" : "dark";
@@ -36,6 +35,16 @@ export default function App() {
         setTodos([...todos, newTodo]);
     };
 
+    const toggleCompletion = (id) => {
+        setTodos(
+            todos.map((todo) => (todo.id === id ? { ...todo, isComplete: !todo.isComplete } : todo))
+        );
+    };
+
+    const deleteTodo = (id) => {
+        setTodos(todos.filter((todo) => todo.id !== id));
+    };
+
     return (
         <div
             data-theme={theme}
@@ -48,7 +57,12 @@ export default function App() {
             <div className="container mx-auto px-4 pt-12 max-w-md">
                 <Header theme={theme} toggleTheme={toggleTheme} />
                 <main>
-                    <TodoList todos={todos} addTodo={addTodo} />
+                    <TodoList
+                        todos={todos}
+                        addTodo={addTodo}
+                        deleteTodo={deleteTodo}
+                        toggleCompletion={toggleCompletion}
+                    />
                     <Filters />
                 </main>
             </div>
