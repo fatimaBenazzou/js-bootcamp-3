@@ -7,6 +7,7 @@ export default function TodoItem({ todo, deleteTodo, toggleCompletion, onEditReq
                 onClick={() => toggleCompletion(todo.id)}
                 type="checkbox"
                 className="checkbox checkbox-primary"
+                checked={todo.isComplete}
             />
             <p className={todo.isComplete ? "line-through text-gray-400" : ""}>{todo.text}</p>
 

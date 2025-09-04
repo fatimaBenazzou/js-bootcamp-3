@@ -6,6 +6,7 @@ import Filters from "./components/Filters";
 export default function App() {
     const [theme, setTheme] = useState("dark");
     const [todos, setTodos] = useState([]);
+    const [filter, setFilter] = useState("all");
 
     const toggleTheme = () => {
         const newTheme = theme === "dark" ? "light" : "dark";
@@ -48,6 +49,14 @@ export default function App() {
         setTodos(todos.filter((todo) => todo.id !== id));
     };
 
+    const filteredTodos = todos.filter((todo) => {
+        if (filter === "active") return !todo.isComplete;
+        if (filter === "completed") return todo.isComplete;
+        return true;
+    });
+
+    const itemsLeft = todos.filter((todo) => !todo.isComplete).length;
+
     return (
         <div
             data-theme={theme}
@@ -61,13 +70,13 @@ export default function App() {
                 <Header theme={theme} toggleTheme={toggleTheme} />
                 <main>
                     <TodoList
-                        todos={todos}
+                        todos={filteredTodos}
                         addTodo={addTodo}
                         deleteTodo={deleteTodo}
                         toggleCompletion={toggleCompletion}
                         editTodo={editTodo}
                     />
-                    <Filters />
+                    <Filters filter={filter} setFilter={setFilter} itemsLeft={itemsLeft} />
                 </main>
             </div>
         </div>
