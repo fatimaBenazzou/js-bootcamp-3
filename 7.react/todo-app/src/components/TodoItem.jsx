@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function TodoItem({ todo, deleteTodo, toggleCompletion }) {
+export default function TodoItem({ todo, deleteTodo, toggleCompletion, onEditRequest }) {
     return (
         <li className="list-row">
             <input
@@ -10,7 +10,10 @@ export default function TodoItem({ todo, deleteTodo, toggleCompletion }) {
             />
             <p className={todo.isComplete ? "line-through text-gray-400" : ""}>{todo.text}</p>
 
-            <button className="btn btn-ghost btn-sm">
+            <button
+                className="btn btn-ghost btn-sm"
+                onClick={() => onEditRequest(todo.id, todo.text)}
+            >
                 <span className="icon-[iwwa--edit] text-base-content"></span>
             </button>
             <button onClick={() => deleteTodo(todo.id)} className="btn btn-ghost btn-sm">

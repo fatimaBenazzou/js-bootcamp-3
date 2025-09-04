@@ -35,6 +35,9 @@ export default function App() {
         setTodos([...todos, newTodo]);
     };
 
+    const editTodo = (id, newText) => {
+        setTodos(todos.map((todo) => (todo.id === id ? { ...todo, text: newText } : todo)));
+    };
     const toggleCompletion = (id) => {
         setTodos(
             todos.map((todo) => (todo.id === id ? { ...todo, isComplete: !todo.isComplete } : todo))
@@ -62,6 +65,7 @@ export default function App() {
                         addTodo={addTodo}
                         deleteTodo={deleteTodo}
                         toggleCompletion={toggleCompletion}
+                        editTodo={editTodo}
                     />
                     <Filters />
                 </main>
