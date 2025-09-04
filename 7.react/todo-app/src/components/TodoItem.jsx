@@ -4,7 +4,7 @@ export default function TodoItem({ todo, deleteTodo, toggleCompletion, onEditReq
     return (
         <li className="list-row">
             <input
-                onClick={() => toggleCompletion(todo.id)}
+                onChange={() => toggleCompletion(todo.id)}
                 type="checkbox"
                 className="checkbox checkbox-primary"
                 checked={todo.isComplete}

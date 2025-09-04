@@ -5,7 +5,7 @@ import Filters from "./components/Filters";
 
 export default function App() {
     const [theme, setTheme] = useState("dark");
-    const [todos, setTodos] = useState([]);
+    const [todos, setTodos] = useState(JSON.parse(localStorage.getItem("todos")) || []);
     const [filter, setFilter] = useState("all");
 
     const toggleTheme = () => {
@@ -23,6 +23,10 @@ export default function App() {
     useEffect(() => {
         localStorage.setItem("theme", theme);
     }, [theme]);
+
+    useEffect(() => {
+        localStorage.setItem("todos", JSON.stringify(todos));
+    }, [todos]);
 
     const addTodo = (text) => {
         if (text.trim() === "") return;
@@ -47,6 +51,10 @@ export default function App() {
 
     const deleteTodo = (id) => {
         setTodos(todos.filter((todo) => todo.id !== id));
+    };
+
+    const clearCompleted = () => {
+        setTodos(todos.filter((todo) => !todo.isComplete));
     };
 
     const filteredTodos = todos.filter((todo) => {
@@ -76,7 +84,12 @@ export default function App() {
                         toggleCompletion={toggleCompletion}
                         editTodo={editTodo}
                     />
-                    <Filters filter={filter} setFilter={setFilter} itemsLeft={itemsLeft} />
+                    <Filters
+                        filter={filter}
+                        setFilter={setFilter}
+                        itemsLeft={itemsLeft}
+                        clearCompleted={clearCompleted}
+                    />
                 </main>
             </div>
         </div>
