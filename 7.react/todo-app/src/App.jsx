@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import Header from "./components/Header";
 import TodoList from "./components/TodoList";
 import Filters from "./components/Filters";
@@ -57,13 +57,17 @@ export default function App() {
         setTodos(todos.filter((todo) => !todo.isComplete));
     };
 
-    const filteredTodos = todos.filter((todo) => {
-        if (filter === "active") return !todo.isComplete;
-        if (filter === "completed") return todo.isComplete;
-        return true;
-    });
+    const filteredTodos = useMemo(
+        () =>
+            todos.filter((todo) => {
+                if (filter === "active") return !todo.isComplete;
+                if (filter === "completed") return todo.isComplete;
+                return true;
+            }),
+        [todos, filter]
+    );
 
-    const itemsLeft = todos.filter((todo) => !todo.isComplete).length;
+    const itemsLeft = useMemo(() => todos.filter((todo) => !todo.isComplete).length, [todos]);
 
     return (
         <div
