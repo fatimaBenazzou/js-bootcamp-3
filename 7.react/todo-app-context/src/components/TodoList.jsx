@@ -1,8 +1,11 @@
 import React, { useRef, useState } from "react";
 import TodoAdd from "./TodoAdd";
 import TodoItem from "./TodoItem";
+import { useTodo } from "../hooks/useTodos";
 
-export default function TodoList({ todos, addTodo, deleteTodo, toggleCompletion, editTodo }) {
+export default function TodoList() {
+    const { todos, editTodo } = useTodo();
+
     const [dialog, setDialog] = useState({ id: null, text: "" });
     const dialogRef = useRef(null);
 
@@ -13,14 +16,12 @@ export default function TodoList({ todos, addTodo, deleteTodo, toggleCompletion,
 
     return (
         <section>
-            <TodoAdd addTodo={addTodo} />
+            <TodoAdd />
             <ul className="list bg-base-100 shadow-lg rounded-box">
                 {todos.map((todo) => (
                     <TodoItem
                         key={todo.id}
                         todo={todo}
-                        deleteTodo={deleteTodo}
-                        toggleCompletion={toggleCompletion}
                         onEditRequest={(id, currentValue) => {
                             setDialog({ id, text: currentValue });
                             dialogRef.current?.showModal();

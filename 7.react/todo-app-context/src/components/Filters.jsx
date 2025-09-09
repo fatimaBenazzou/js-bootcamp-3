@@ -1,6 +1,10 @@
+import { useTodo } from "../hooks/useTodos";
+
 const buttons = ["all", "active", "completed"];
 
-export default function Filters({ filter, setFilter, itemsLeft, clearCompleted }) {
+export default function Filters() {
+    const { filter, setFilter, itemsLeft, clearCompleted } = useTodo();
+
     return (
         <section className="text-center text-gray-300 mt-4">
             <div className="card flex bg-base-100 shadow-lg p-4 rounded-box">

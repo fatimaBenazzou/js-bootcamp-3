@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { useTodo } from "../hooks/useTodos";
 
-export default function TodoAdd({ addTodo }) {
+export default function TodoAdd() {
+    const { addTodo } = useTodo();
     const [newTodoText, setNewTodoText] = useState("");
 
     const handleAddTodo = () => {

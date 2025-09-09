@@ -1,6 +1,9 @@
 import React from "react";
+import { useTodo } from "../hooks/useTodos";
 
-export default function TodoItem({ todo, deleteTodo, toggleCompletion, onEditRequest }) {
+export default function TodoItem({ todo }) {
+    const { deleteTodo, toggleCompletion, onEditRequest } = useTodo();
+
     return (
         <li className="list-row">
             <input
