@@ -2,27 +2,12 @@ import React, { useEffect, useMemo, useState } from "react";
 import Header from "./components/Header";
 import TodoList from "./components/TodoList";
 import Filters from "./components/Filters";
+import useTheme from "./hooks/useTheme";
 
 export default function App() {
-    const [theme, setTheme] = useState("dark");
+    const { theme } = useTheme();
     const [todos, setTodos] = useState(JSON.parse(localStorage.getItem("todos")) || []);
     const [filter, setFilter] = useState("all");
-
-    const toggleTheme = () => {
-        const newTheme = theme === "dark" ? "light" : "dark";
-        setTheme(newTheme);
-    };
-
-    useEffect(() => {
-        const savedTheme = localStorage.getItem("theme");
-        if (savedTheme) {
-            setTheme(savedTheme);
-        }
-    }, []);
-
-    useEffect(() => {
-        localStorage.setItem("theme", theme);
-    }, [theme]);
 
     useEffect(() => {
         localStorage.setItem("todos", JSON.stringify(todos));
@@ -79,7 +64,7 @@ export default function App() {
             className={` min-h-screen bg-no-repeat w-full`}
         >
             <div className="container mx-auto px-4 pt-12 max-w-md">
-                <Header theme={theme} toggleTheme={toggleTheme} />
+                <Header />
                 <main>
                     <TodoList
                         todos={filteredTodos}

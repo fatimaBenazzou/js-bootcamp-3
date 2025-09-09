@@ -1,4 +1,8 @@
-export default function Header({ toggleTheme, theme }) {
+import useTheme from "../hooks/useTheme";
+
+export default function Header() {
+    const { toggleTheme, theme } = useTheme();
+
     return (
         <header className="flex justiry-between items-center mb-8">
             <h1 className="text-4xl font-bold text-white tracking-widest">TODO</h1>
