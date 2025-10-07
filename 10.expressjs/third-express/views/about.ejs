@@ -4,11 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/public/style.css">
 </head>
 <body>
     <div>
-            <h2><%- student.firstName %> <%- student.lastName %></h2>
-            <p>My note is : <%- student.note %></p>
+            <h2><%= student.firstName %> <%= student.lastName %></h2>
+            <p>My note is : <%= student.note %></p>
+            <p>
+                <% if(student.note >= 15) { %>
+                    Winner 
+                    <% } else { %>
+                        Looooooser
+                    <% } %>
+            </p>
+            <ul>
+                <% student.skills.forEach((skill) => { %>
+                    <!--  -->
+                    <li>
+                        <%= skill.name  %>
+                        <%= skill.level  %>
+                    </li>
+                    <% }) %>
+            </ul>
         </div>
 </body>
 </html>
