@@ -30,8 +30,9 @@ app.get("/about", (req, res) => {
             <p>My note is : ${user.note}</p>
         </div>
         `);
+        
 });
-
+   
 app.get('/profile/:id', (req, res) => {
   res.send(`User ID: ${req.params.id}`);
 });
